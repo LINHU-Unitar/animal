@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.util.Random;
 
 public class Tiger extends Critter {
     private int moveCount = 0;
@@ -16,7 +17,14 @@ public class Tiger extends Critter {
     }
 
     private void changeColor() {
-        currentColor = Color.white;
+        Random random = new Random();
+        Color[] colors = {Color.white, Color.GREEN, Color.blue};
+
+        // 生成一个随机索引，范围在0到2之间（包括0和2）
+        int randomIndex = random.nextInt(3);
+
+        // 根据随机索引选择颜色
+        currentColor = colors[randomIndex];
     }
 
     @Override

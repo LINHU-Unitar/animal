@@ -2,7 +2,7 @@
 import java.awt.Color;
 
 public class Bear extends Critter {
-    public int moveCount;
+    public int moveCount = 1  ;
     private boolean polar;
     public Bear(boolean polar) {
         super();
@@ -16,6 +16,7 @@ public class Bear extends Critter {
 
     @Override
     public String toString() {
+        moveCount++;
         return moveCount % 2 == 0 ? "/" : "\\";
     }
 

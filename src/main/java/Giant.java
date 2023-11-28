@@ -6,7 +6,7 @@ import java.awt.Color;
  * 根据移动步数，巨人会改变其表示的字符串。
  */
 public class Giant extends Critter {
-    public int moveCount;
+    public int moveCount =0;
 
     /**
      * Giant类的构造函数。
@@ -31,6 +31,7 @@ public class Giant extends Critter {
      */
     @Override
     public String toString() {
+        moveCount++;
         switch (moveCount / 6 % 4) {
             case 0: return "fee";
             case 1: return "fie";
